@@ -27,13 +27,14 @@
   order: 1;
 }
 
+#flex-section2 .item3 {
+  order: 2;
+}
+
 #flex-section2 .item2 {
   order: 3;
 }
 
-#flex-section2 .item3 {
-  order: 2;
-}
 
 /* end Flexbox Part 2 */
 
@@ -42,17 +43,25 @@
 
 #flex-section3 .box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;    /* Centers the card horizontally */
+  align-items: center;        /* Centers the card vertically */
+  height: 100%;                /* Ensure full height for vertical centering */
 }
 
 #flex-section3 .tags ul {
   display: flex;
-  gap: 10px;
+  gap: 10px;                   /* Spacing between tags */
   list-style: none;
+  margin-top: 10px;            /* Space between image and tags */
   padding: 0;
-  margin: 10px 0 0 0;
 }
+
+#flex-section3 .tags ul li {
+  background-color: #eee;      /* Light background for each tag */
+  padding: 5px 10px;
+  border-radius: 3px;          /* Rounded corners for a tag-like appearance */
+}
+
 
 /* end Flexbox Part 3 */
 
