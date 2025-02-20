@@ -1,5 +1,4 @@
 /* Flexbox Part 1 */
-
 #flex-section1 ul {
   display: flex;
   justify-content: space-evenly;
@@ -12,7 +11,6 @@
 
 
 /* Flexbox Part 2 */
-
 #flex-section2 ul {
   display: flex;
   margin: 0;
@@ -35,12 +33,10 @@
   order: 3;
 }
 
-
 /* end Flexbox Part 2 */
 
 
 /* Flexbox Part 3 */
-
 #flex-section3 .box {
   display: flex;
   justify-content: center;    /* Centers the card horizontally */
@@ -62,12 +58,10 @@
   border-radius: 3px;          /* Rounded corners for a tag-like appearance */
 }
 
-
 /* end Flexbox Part 3 */
 
 
 /* Grid Part 1 */
-
 #grid-section1 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -79,7 +73,6 @@
 
 
 /* Grid Part 2 */
-
 #grid-section2 .gridboxblue {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
@@ -96,7 +89,6 @@
 
 
 /* Grid Part 3 */
-
 #grid-section3 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -128,7 +120,6 @@
 
 
 /* Transition Part */
-
 #transition-section .box a {
   display: inline-block;
   background-color: #ccc;
@@ -145,3 +136,36 @@
 }
 
 /* end Transition Part */
+
+
+/* General Layout Centering */
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;  /* Optional: Set a max-width for your page */
+  margin-left: auto;  /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+.w700 {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;  /* Center the sections within the page */
+}
+
+#flex-section1 .box,  /* For the flex section in Part 1 */
+#flex-section2 .box,  /* For the flex section in Part 2 */
+#flex-section3 .box   /* For the flex section in Part 3 */
+{
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+}
+
+#grid-section1 .box,
+#grid-section2 .box,
+#grid-section3 .box {
+  display: grid;
+  justify-items: center;  /* Center grid items horizontally */
+  align-items: center;    /* Center grid items vertically */
+}
