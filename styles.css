@@ -155,3 +155,7 @@ header, section {
   max-width: 1200px;        /* Limit max-width */
   margin: 20px auto;        /* Center header and sections horizontally with space */
 }
+
+nav {
+  role: navigation;         /* Semantic role for navigation */
+}
