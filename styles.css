@@ -5,16 +5,17 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%; /* Ensure full width */
 }
 
 /* end Flexbox Part 1 */
-
 
 /* Flexbox Part 2 */
 #flex-section2 ul {
   display: flex;
   margin: 0;
   padding: 0;
+  width: 100%; /* Ensure full width */
 }
 
 #flex-section2 li {
@@ -35,13 +36,14 @@
 
 /* end Flexbox Part 2 */
 
-
 /* Flexbox Part 3 */
 #flex-section3 .box {
   display: flex;
   justify-content: center;    /* Centers the card horizontally */
   align-items: center;        /* Centers the card vertically */
   height: 100%;                /* Ensure full height for vertical centering */
+  max-width: 700px;            /* Limit the width of the flex section */
+  margin: 0 auto;              /* Center the box horizontally */
 }
 
 #flex-section3 .tags ul {
@@ -60,17 +62,17 @@
 
 /* end Flexbox Part 3 */
 
-
 /* Grid Part 1 */
 #grid-section1 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
   gap: 20px;
+  max-width: 1200px;           /* Limit grid width */
+  margin: 0 auto;              /* Center the grid horizontally */
 }
 
 /* end Grid Part 1 */
-
 
 /* Grid Part 2 */
 #grid-section2 .gridboxblue {
@@ -87,13 +89,14 @@
 
 /* end Grid Part 2 */
 
-
 /* Grid Part 3 */
 #grid-section3 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 100px 300px 100px;
   gap: 10px;
+  max-width: 1200px;           /* Limit grid width */
+  margin: 0 auto;              /* Center the grid horizontally */
 }
 
 #grid-section3 .box1 {
@@ -118,7 +121,6 @@
 
 /* end Grid Part 3 */
 
-
 /* Transition Part */
 #transition-section .box a {
   display: inline-block;
@@ -137,35 +139,19 @@
 
 /* end Transition Part */
 
-
 /* General Layout Centering */
 body {
   margin: 0;
   padding: 0;
-  max-width: 1200px;  /* Optional: Set a max-width for your page */
-  margin-left: auto;  /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
-}
-
-.w700 {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;  /* Center the sections within the page */
-}
-
-#flex-section1 .box,  /* For the flex section in Part 1 */
-#flex-section2 .box,  /* For the flex section in Part 2 */
-#flex-section3 .box   /* For the flex section in Part 3 */
-{
   display: flex;
-  justify-content: center;  /* Center horizontally */
-  align-items: center;      /* Center vertically */
+  justify-content: center;  /* Center all sections horizontally */
+  align-items: flex-start;  /* Align at the top */
+  flex-direction: column;   /* Stack sections vertically */
+  min-height: 100vh;        /* Ensure it fills the viewport height */
 }
 
-#grid-section1 .box,
-#grid-section2 .box,
-#grid-section3 .box {
-  display: grid;
-  justify-items: center;  /* Center grid items horizontally */
-  align-items: center;    /* Center grid items vertically */
+header, section {
+  width: 100%;              /* Make sure header and sections take full width */
+  max-width: 1200px;        /* Limit max-width */
+  margin: 20px auto;        /* Center header and sections horizontally with space */
 }
